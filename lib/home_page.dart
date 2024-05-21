@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:koreadictioanry/data.dart';
 
@@ -88,12 +89,13 @@ class _HomePageState extends State<HomePage> {
 
   Widget _card(Map<String, dynamic> meaning){
     return Padding(
-      padding: const EdgeInsets.all(16.0),
+      padding: const EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 0.0),
       child: Row(
         children: [
           Expanded(child: Text(meaning['myn_word'] ?? "မင်္ဂလာပါ")),
           Expanded(child: Text(meaning['kr_word'] ?? "안녕하세요")),
-          IconButton(onPressed: (){ speakText(meaning['kr_word'] ?? "안녕하세요"); }, icon: Icon(Icons.speaker))
+          IconButton(onPressed: (){ speakText(meaning['kr_word'] ?? "안녕하세요"); }, icon: Icon(Icons.speaker_outlined)),
+          IconButton(onPressed: (){ _copyToClipboard(meaning['kr_word'] ?? "안녕하세요"); }, icon: Icon(Icons.copy))
         ],
       ),
     );
@@ -101,7 +103,38 @@ class _HomePageState extends State<HomePage> {
 
 
   Future<void> speakText(String text) async {
-    await flutterTts.speak(text);
+    FlutterTts flutterTts = FlutterTts();
+    try {
+      print("trying to speak $text");
+      await flutterTts.speak(text);
+      print("done");
+    } catch (e) {
+      print("Error while speaking: $e");
+    }
+
+    //var result = await flutterTts.speak(text);
+    //print(result);
   }
-  
+
+  void _copyToClipboard(String text) {
+    Clipboard.setData(ClipboardData(text: text));
+    // You can show a message or perform any other action here
+    // toast message , snack bar
+
+    _showSnackBar(context, '$text ကို ကူးယူပြီးပါပြီ');
+  }
+
+
+  void _showSnackBar(BuildContext context, String message) {
+    final snackBar = SnackBar(
+        content: Text(message),
+        action: SnackBarAction(
+          label: 'OK',
+          onPressed: () {
+            ScaffoldMessenger.of(context).hideCurrentSnackBar();
+          },
+        ),
+    );
+    ScaffoldMessenger.of(context).showSnackBar(snackBar);
+  }
 }
