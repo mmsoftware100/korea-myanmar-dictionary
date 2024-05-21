@@ -65,6 +65,7 @@ class _HomePageState extends State<HomePage> {
           SizedBox(height: 8.0,),
           if(dictionary.isEmpty) Expanded(child: Center(child: Text("No Result Found"),)),
           if(dictionary.isNotEmpty) Text("${dictionary.length} results found!", style: TextStyle(color: Colors.grey),),
+          SizedBox(height: 8.0,),
           Expanded(
               child: ListView.separated(
                   physics: BouncingScrollPhysics(),
@@ -103,8 +104,8 @@ class _HomePageState extends State<HomePage> {
 
 
   Future<void> speakText(String text) async {
-    flutterTts.speak(text);
-    /*
+    // flutterTts.speak(text);
+
     FlutterTts flutterTts = FlutterTts();
     try {
       print("trying to speak $text");
@@ -114,7 +115,6 @@ class _HomePageState extends State<HomePage> {
       print("Error while speaking: $e");
     }
 
-     */
 
     //var result = await flutterTts.speak(text);
     //print(result);
