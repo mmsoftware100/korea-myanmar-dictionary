@@ -1,7 +1,13 @@
+import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:koreadictioanry/data.dart';
+
+
+const String FCM_TOPIC = "korea_dictionary";
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -14,19 +20,69 @@ class _HomePageState extends State<HomePage> {
 
   List<Map<String, dynamic>> dictionary = data;
 
-  FlutterTts flutterTts = FlutterTts();
+  // FlutterTts flutterTts = FlutterTts();
   TextEditingController textEditingController = TextEditingController();
+
+
+
+  final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
+
+  final FirebaseMessaging _firebaseMessaging = FirebaseMessaging.instance;
+
+  /// Create a [AndroidNotificationChannel] for heads up notifications
+  late AndroidNotificationChannel channel;
+
+
 
   @override
   void initState() {
     super.initState();
-    initializeTts();
+    //initializeTts();
+
+    WidgetsBinding.instance!.addPostFrameCallback((_) {
+      // executes after build
+
+
+      channel = const AndroidNotificationChannel(
+        'high_importance_channel', // id
+        'High Importance Notifications', // title
+        description:
+        'This channel is used for important notifications.', // description
+        importance: Importance.high,
+      );
+
+      _firebaseMessaging.requestPermission(
+        sound: true,
+        badge: true,
+        alert: true,
+        provisional: false, // Set to true for iOS 12 and above to enable provisional authorization.
+      );
+
+
+      print("trying to subscribe topic $FCM_TOPIC");
+      _firebaseMessaging.subscribeToTopic(FCM_TOPIC);
+      print("subscribed");
+
+      _firebaseMessaging.getToken().then((token) {
+        print("Firebase Token: $token");
+      });
+
+      // foreground handler
+
+      FirebaseMessaging.onMessage.listen((RemoteMessage message) {
+        print("FCM->foreground handler");
+        print("Received FCM message: ${message.notification?.body}");
+        showFlutterNotification(message);
+      });
+
+    });
+
   }
 
   Future<void> initializeTts() async {
-    await flutterTts.setLanguage("ko-KR");
-    await flutterTts.setPitch(1.0);
-    await flutterTts.setSpeechRate(0.5);
+    //await flutterTts.setLanguage("ko-KR");
+    //await flutterTts.setPitch(1.0);
+    //await flutterTts.setSpeechRate(0.5);
   }
 
   @override
@@ -87,6 +143,32 @@ class _HomePageState extends State<HomePage> {
       dictionary = result;
     });
   }
+
+
+  void showFlutterNotification(RemoteMessage message) {
+    RemoteNotification? notification = message.notification;
+    AndroidNotification? android = message.notification?.android;
+    if (notification != null && android != null && !kIsWeb) {
+      // how to handle callback on this notification.
+      // we also need payload
+      flutterLocalNotificationsPlugin.show(
+        notification.hashCode,
+        notification.title,
+        notification.body,
+        NotificationDetails(
+          android: AndroidNotificationDetails(
+            channel.id,
+            channel.name,
+            channelDescription: channel.description,
+            // TODO add a proper drawable resource to android, for now using
+            //      one that already exists in example app.
+            icon: 'background',
+          ),
+        ),
+      );
+    }
+  }
+
 
   Widget _card(Map<String, dynamic> meaning){
     return Padding(

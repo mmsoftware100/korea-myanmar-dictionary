@@ -1,0 +1,309 @@
+{
+  "project_info": {
+    "project_number": "52961655254",
+    "firebase_url": "https://golden-day-mm-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "golden-day-mm",
+    "storage_bucket": "golden-day-mm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:52961655254:android:9164ac76fdc50d8bcf8c77",
+        "android_client_info": {
+          "package_name": "com.ballwin.org"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "52961655254-4tjlobduqg0j5346ek3uomtc8dt07k07.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1jpK695d0LojfQecwIUJGajt61o0zNoE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "52961655254-4tjlobduqg0j5346ek3uomtc8dt07k07.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:52961655254:android:a7c57737fe971338cf8c77",
+        "android_client_info": {
+          "package_name": "com.bawathitchurch.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "52961655254-4tjlobduqg0j5346ek3uomtc8dt07k07.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1jpK695d0LojfQecwIUJGajt61o0zNoE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "52961655254-4tjlobduqg0j5346ek3uomtc8dt07k07.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:52961655254:android:96d5c2bcd7f8937ccf8c77",
+        "android_client_info": {
+          "package_name": "com.kosai.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "52961655254-4tjlobduqg0j5346ek3uomtc8dt07k07.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1jpK695d0LojfQecwIUJGajt61o0zNoE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "52961655254-4tjlobduqg0j5346ek3uomtc8dt07k07.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:52961655254:android:ec64bb2b81f69db6cf8c77",
+        "android_client_info": {
+          "package_name": "com.mmsoftware100.goldendays"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "52961655254-g69m9jb7ikre8s4uno61l2ps3lav9ed7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mmsoftware100.goldendays",
+            "certificate_hash": "e6650a3af506b8d15548c417b2fe2bfe8898b6f8"
+          }
+        },
+        {
+          "client_id": "52961655254-4tjlobduqg0j5346ek3uomtc8dt07k07.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1jpK695d0LojfQecwIUJGajt61o0zNoE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "52961655254-4tjlobduqg0j5346ek3uomtc8dt07k07.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:52961655254:android:aafc5219bc01f0f7cf8c77",
+        "android_client_info": {
+          "package_name": "com.mmsoftware100.hellosayarwon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "52961655254-4tjlobduqg0j5346ek3uomtc8dt07k07.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1jpK695d0LojfQecwIUJGajt61o0zNoE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "52961655254-4tjlobduqg0j5346ek3uomtc8dt07k07.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:52961655254:android:e547310751d5b374cf8c77",
+        "android_client_info": {
+          "package_name": "com.mmsoftware100.hellosayarwon.hellosayarwon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "52961655254-4tjlobduqg0j5346ek3uomtc8dt07k07.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1jpK695d0LojfQecwIUJGajt61o0zNoE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "52961655254-4tjlobduqg0j5346ek3uomtc8dt07k07.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:52961655254:android:83e3a5a63f390525cf8c77",
+        "android_client_info": {
+          "package_name": "com.mmsoftware100.koreadictioanry"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "52961655254-4tjlobduqg0j5346ek3uomtc8dt07k07.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1jpK695d0LojfQecwIUJGajt61o0zNoE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "52961655254-4tjlobduqg0j5346ek3uomtc8dt07k07.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:52961655254:android:6637f794a4302fdacf8c77",
+        "android_client_info": {
+          "package_name": "com.mmsoftware100.shandirectory"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "52961655254-4tjlobduqg0j5346ek3uomtc8dt07k07.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1jpK695d0LojfQecwIUJGajt61o0zNoE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "52961655254-4tjlobduqg0j5346ek3uomtc8dt07k07.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:52961655254:android:f99d1330127c5281cf8c77",
+        "android_client_info": {
+          "package_name": "com.mohnyindaily365"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "52961655254-4tjlobduqg0j5346ek3uomtc8dt07k07.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1jpK695d0LojfQecwIUJGajt61o0zNoE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "52961655254-4tjlobduqg0j5346ek3uomtc8dt07k07.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:52961655254:android:733a8d306ccb35b0cf8c77",
+        "android_client_info": {
+          "package_name": "com.myintmo.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "52961655254-4tjlobduqg0j5346ek3uomtc8dt07k07.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1jpK695d0LojfQecwIUJGajt61o0zNoE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "52961655254-4tjlobduqg0j5346ek3uomtc8dt07k07.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
