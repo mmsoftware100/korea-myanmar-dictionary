@@ -8,6 +8,7 @@ One Page ပဲ သုံးမယ်။
 ### To Do List
 
 - [x] Korea စာကို အသံထွက် ဖက်ပြဖို့။ TTS Engine ဘယ်လို ဖွင့်ရမလဲ?
-- [ ] App Name
-- [ ] App Icon
+- [x] App Name
+- [x] App Icon
 - [ ] FCM
+
