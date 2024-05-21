@@ -103,6 +103,8 @@ class _HomePageState extends State<HomePage> {
 
 
   Future<void> speakText(String text) async {
+    flutterTts.speak(text);
+    /*
     FlutterTts flutterTts = FlutterTts();
     try {
       print("trying to speak $text");
@@ -111,6 +113,8 @@ class _HomePageState extends State<HomePage> {
     } catch (e) {
       print("Error while speaking: $e");
     }
+
+     */
 
     //var result = await flutterTts.speak(text);
     //print(result);
