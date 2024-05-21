@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_tts/flutter_tts.dart';
 import 'package:koreadictioanry/data.dart';
 
 class HomePage extends StatefulWidget {
@@ -11,6 +12,21 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
 
   List<Map<String, dynamic>> dictionary = data;
+
+  FlutterTts flutterTts = FlutterTts();
+  TextEditingController textEditingController = TextEditingController();
+
+  @override
+  void initState() {
+    super.initState();
+    initializeTts();
+  }
+
+  Future<void> initializeTts() async {
+    await flutterTts.setLanguage("ko-KR");
+    await flutterTts.setPitch(1.0);
+    await flutterTts.setSpeechRate(0.5);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -75,10 +91,17 @@ class _HomePageState extends State<HomePage> {
       padding: const EdgeInsets.all(16.0),
       child: Row(
         children: [
-          Expanded(child: Text(meaning['myn_word'] ?? "")),
-          Expanded(child: Text(meaning['kr_word'] ?? ""))
+          Expanded(child: Text(meaning['myn_word'] ?? "မင်္ဂလာပါ")),
+          Expanded(child: Text(meaning['kr_word'] ?? "안녕하세요")),
+          IconButton(onPressed: (){ speakText(meaning['kr_word'] ?? "안녕하세요"); }, icon: Icon(Icons.speaker))
         ],
       ),
     );
   }
+
+
+  Future<void> speakText(String text) async {
+    await flutterTts.speak(text);
+  }
+  
 }
